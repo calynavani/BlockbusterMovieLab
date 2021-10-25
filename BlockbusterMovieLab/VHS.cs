@@ -6,17 +6,22 @@ namespace BlockbusterMovieLab
 {
     class VHS : Movie
     {
+
         public int CurrentTime { get; set; }
 
 
-        public VHS()
+        public VHS(int currenttime,string title, string category, int runTime, List<string> scenes): base(title, category, runTime)
         {
+
+            this.CurrentTime = currenttime;
         }
+
+
             
 
-        public int Play()
+        public override void Play()
         {
-
+            CurrentTime++;
         }
 
         public void Rewind()

@@ -6,11 +6,11 @@ namespace BlockbusterMovieLab
 {
     class DVD: Movie
     {
-        public DVD ()
+        public DVD(string title, string category, int runTime, List<string> scenes): base(title, category,runTime)
         {
 
         }
-        public void Play()
+        public override void Play()
         {
             Console.WriteLine($"What scene of would you like to watch? ");
             
